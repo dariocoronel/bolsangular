@@ -1,0 +1,16 @@
+<div class="container" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutAlign.gt-md="space-around center"
+  fxLayoutGap="10px">
+
+  <mat-card *ngIf="ofertas" fxFlex>
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>
+        <h3>Ofertas</h3>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      {{ofertas}}
+    </mat-card-content>
+  </mat-card>
+
+</div>
