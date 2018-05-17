@@ -1,12 +1,13 @@
-<div fxLayout="row" fxLayoutGap="10px">
+<div fxLayout="column" fxLayoutGap="10px">
 
   <mat-card fxFlex>
     <mat-card-content>
-
-      <canvas baseChart width="200px" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
-        [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)"></canvas>
-
+      <div style="position:relative; overflow-x:scroll">
+        <div style="height:300px; width:5000px;">
+          <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
+            [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+        </div>
+      </div>
     </mat-card-content>
   </mat-card>
 
