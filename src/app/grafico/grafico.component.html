@@ -1,15 +1,27 @@
 <div fxLayout="column" fxLayoutGap="10px">
 
+  <div [hidden]="operaciones">
+    <mat-spinner></mat-spinner>
+    <h4>Cargando...</h4>
+  </div>
+
   <mat-card fxFlex>
     <mat-card-content>
-      <div style="position:relative; overflow-x:scroll">
-        <div style="height:300px; width:5000px;">
+      <div class="grafico-wrapper">
+        <div class="grafico">
           <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors"
-            [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+            [legend]="lineChartLegend" [chartType]="lineChartType"></canvas>
         </div>
       </div>
     </mat-card-content>
   </mat-card>
+
+  <div fxLayout="row" fxLayoutGap="10px">
+    <button mat-raised-button color="primary" (click)="funcion()">Agregar 1</button>
+    <button mat-raised-button color="accent" (click)="boton2()">Agregar 2</button>
+    <button mat-raised-button color="warn" (click)="boton3()">Agregar 3</button>
+    <button mat-raised-button color="warn" (click)="log()">Log</button>
+  </div>
 
   <mat-card fxFlex>
     <mat-card-content>

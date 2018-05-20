@@ -1,3 +1,3 @@
 export function RestangularConfigFactory (RestangularProvider) {
-  RestangularProvider.setBaseUrl('http://localhost:8080/');
+  RestangularProvider.setBaseUrl('http://192.168.0.105:8080/');
 }

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { MatCardModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatCardModule, MatProgressSpinnerModule, MatButtonModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { RestangularModule, Restangular } from 'ngx-restangular';
@@ -22,7 +22,7 @@ import { BolsaService } from './servicios/bolsa.service';
   ],
   imports: [
     BrowserModule,
-    MatCardModule, MatProgressSpinnerModule,
+    MatCardModule, MatProgressSpinnerModule, MatButtonModule,
     FlexLayoutModule,
     RestangularModule.forRoot(RestangularConfigFactory),
     DataTablesModule,
